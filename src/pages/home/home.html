@@ -1,18 +1,33 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>IndiaBizClub</ion-title>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+   <ion-card>
+     
+     <ion-searchbar [(ngModel)]="searchQuery" (input)="getItems()"></ion-searchbar>
+     <ion-card-header> Businesses</ion-card-header>
+     
+     <ion-list [hidden]="searchResult">
+       <ion-card *ngFor="let business of businessCopy">
+       <ion-card-header>{{business.profile.name | uppercase}} </ion-card-header>
+       <ion-card-content>{{business.profile.overview}}</ion-card-content>
+     
+   </ion-card>
+  </ion-list>
+</ion-card>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>

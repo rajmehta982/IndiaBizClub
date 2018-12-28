@@ -1,0 +1,142 @@
+{
+	"businesses" : [
+	{
+	"profile" : {
+
+        "name": "Raj Enterprises",
+        "overview" : "this is for test" ,
+        "industry" : "Music" ,
+        "estYear" : 1998 ,
+        "firmType" : "Partnership",
+        "expLevel" : "National",
+        "noOfEmployees" : 20000,
+        "nature" : ""
+    },
+	
+	"products" : "We make several types of guitars",
+	
+	"catalogue" : [
+		{
+			"name" : "epiphone lespaul",
+			"images" : "",
+			"description" : "electric guitar of great quality"
+		},
+		
+		{
+			"name" : "yamaha acoustic",
+			"images" : "",
+			"description" : "acoustic guitar of great quality"
+		},
+		
+		{
+			"name" : "ibanez acoustic",
+			"images" : "",
+			"description" : "italian design"
+		}
+	],
+	
+	"contact" : {
+		"name" : "raj mehta",
+		"desgination" : "CEO",
+		"website": "www.google.co.in",
+		"altwebsite" : "",
+		"pincode": 400058,
+		"city" : "Mumbai",
+		"state" : "Maharashtra",
+		"country" : "India",
+		"address" : "andheri",
+		"altemail1" :"",
+		"altemail2" :"",
+		"altemail3" :"",
+		"fax": ""
+		
+		},
+		
+	"leads" : [
+	
+	{
+		"date" : "24th Jan, 2018",
+		"name" : "Find the guitar you were looking for",
+		"buySell" : false
+	}
+	
+	]
+	
+	},
+	
+	
+	
+	
+	{
+	"profile" : {
+
+        "name": "Kartik Enterprises",
+        "overview" : "this is also for test" ,
+        "industry" : "Food" ,
+        "estYear" : 2001 ,
+        "firmType" : "Proprietorship",
+        "expLevel" : "National",
+        "noOfEmployees" : 10000,
+        "nature" : ""
+    },
+	
+	"products" : "We make several types of food items",
+	
+	"catalogue" : [
+		{
+			"name" : "vada pav",
+			"images" : "",
+			"description" : "vada pav of great quality"
+		},
+		
+		{
+			"name" : "pani puri",
+			"images" : "",
+			"description" : "pani puri of great quality"
+		},
+		
+		{
+			"name" : "pizza",
+			"images" : "",
+			"description" : "mozarella cheese"
+		}
+	],
+	
+	"contact" : {
+		"name" : "kartik lande",
+		"desgination" : "CEO",
+		"website": "www.google.co.in",
+		"altwebsite" : "",
+		"pincode": 411044,
+		"city" : "Pune",
+		"state" : "Maharashtra",
+		"country" : "India",
+		"address" : "chinchwad",
+		"altemail1" :"",
+		"altemail2" :"",
+		"altemail3" :"",
+		"fax": ""
+		
+		},
+		
+	"leads" : [
+	
+	{
+		"date" : "15th Jan, 2018",
+		"name" : "Find the food that will arouse your taste buds",
+		"buySell" : false
+	}
+	
+	]
+	
+	}
+
+  ]
+  
+}
+		
+	
+	
+		
+	
+	

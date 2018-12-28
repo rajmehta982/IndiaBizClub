@@ -3,8 +3,14 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+
+
+import { RootPage } from '../pages/root/root';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+
+
+import * as firebase from 'firebase';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -16,16 +22,29 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor( public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
+
+    const config = {
+      apiKey: "AIzaSyCDPEawYugYdSsb_bHEyr2If-HULKoIufM",
+    authDomain: "login-e34ac.firebaseapp.com",
+    databaseURL: "https://login-e34ac.firebaseio.com",
+    projectId: "login-e34ac",
+    storageBucket: "login-e34ac.appspot.com",
+    messagingSenderId: "858644650510"
+    };
+
+    firebase.initializeApp(config);
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      
+      { title: 'Login', component: RootPage },
+      { title: 'Home', component: HomePage}
     ];
 
   }
+
 
   initializeApp() {
     this.platform.ready().then(() => {
