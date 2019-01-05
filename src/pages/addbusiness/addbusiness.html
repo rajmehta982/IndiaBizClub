@@ -1,0 +1,63 @@
+<!--
+  Generated template for the AddbusinessPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Add your business</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <div class="row">
+        <h3>Elasticsearch server status: {{status}}</h3>
+      </div>
+      <div class="row">
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+          
+          <br/>
+          <div class="panel panel-primary">
+            <div class="panel-heading">Business</div>
+            <div class="panel-body">
+              <label class="control-label" for="name">ID</label>
+              <input type="number" class="form-control" id="id" formControlName="id">
+              <br/>
+              <label class="control-label" for="name">Name</label>
+              <input type="text" class="form-control" id="name" formControlName="name">
+              <br/>
+              <label class="control-label" for="overview">Overview</label>
+              <input type="text" class="form-control" id="overview" formControlName="overview">
+              <br/>
+              <label class="control-label" for="industry">Industry</label>
+              <input type="text" class="form-control" id="industry" formControlName="industry">
+              <br/>
+              <label class="control-label" for="estYear">Establishment Year</label>
+              <input type = "text" class="form-control" id="estYear" formControlName="estYear">
+              <br/>
+              <label class="control-label" for="firmType">Firm Type</label>
+              <input type = "text" class="form-control" id="firmType" formControlName="firmType">
+              <br/>
+              <label class="control-label" for="expLevel">Expansion Level</label>
+              <input type = "text" class="form-control" id="expLevel" formControlName="expLevel">
+              <br/>
+              <label class="control-label" for="noOfEmployees">No of Employees</label>
+              <input type = "number" class="form-control" id="noOfEmployees" formControlName="noOfEmployees">
+              <br/>
+              <label class="control-label" for="nature">nature</label>
+              <input type = "text" class="form-control" id="nature" formControlName="nature">
+              <br/>
+              <label class="control-label" for="products">Products</label>
+              <input type = "text" class="form-control" id="products" formControlName="products">
+              <br/>
+            </div>
+          </div>
+          <button type="submit" [disabled]="!isConnected" class="btn btn-primary pull-right">Submit</button>
+        </form>
+      </div>
+
+</ion-content>

@@ -7,6 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { RootPage } from '../pages/root/root';
 import { HomePage } from '../pages/home/home';
+import { AddbusinessPage } from '../pages/addbusiness/addbusiness'
 
 
 import * as firebase from 'firebase';
@@ -40,7 +41,8 @@ export class MyApp {
     this.pages = [
       
       { title: 'Login', component: RootPage },
-      { title: 'Home', component: HomePage}
+      { title: 'Home', component: HomePage},
+      { title: 'Add Business', component: AddbusinessPage}
     ];
 
   }

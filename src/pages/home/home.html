@@ -18,13 +18,52 @@
 
    <ion-card>
      
-     <ion-searchbar [(ngModel)]="searchQuery" (input)="getItems()"></ion-searchbar>
+     <ion-searchbar [(ngModel)]="searchQuery" (input)="searchBusinesses()"></ion-searchbar>
+     <button ion-button full (click)="viewAllBusinesses()">View All Businesses</button>
+    
+  </ion-card>
+   
+
+    <ion-card>  
+     <ion-card-header>Filters </ion-card-header>
+        <ion-list>
+            <ion-list-header>Type</ion-list-header>
+            <button ion-item (click)="filterByType('Organization')">Organization </button>
+            <button ion-item (click)="filterByType('Manufacturer')">Manufacturer </button>
+         </ion-list>
+    </ion-card>
+
+    
+    
+     
+   <ion-card>
      <ion-card-header> Businesses</ion-card-header>
      
-     <ion-list [hidden]="searchResult">
-       <ion-card *ngFor="let business of businessCopy">
-       <ion-card-header>{{business.profile.name | uppercase}} </ion-card-header>
-       <ion-card-content>{{business.profile.overview}}</ion-card-content>
+     <ion-list [hidden]="businessViewToggle">
+        <ion-card *ngFor="let business of businesses" >
+        <ion-card-header>{{business._source.profile.name | uppercase}} </ion-card-header>
+        <ion-card-content>{{business._source.profile.overview}}</ion-card-content>
+      
+    </ion-card>
+   </ion-list>
+
+       <ion-list [hidden]="FilterToggle">
+      <ion-card *ngFor="let business of filterSearchResult" >
+      <ion-card-header>{{business._source.profile.name | uppercase}} </ion-card-header>
+      <ion-card-content>{{business._source.profile.overview}}</ion-card-content>
+    
+      </ion-card>
+      </ion-list>
+
+  </ion-card>
+
+  
+  
+  <ion-card>
+      <ion-list>
+       <ion-card *ngFor="let business of searchResult" [hidden]="!businessViewToggle">
+       <ion-card-header>{{business._source.profile.name | uppercase}} </ion-card-header>
+       <ion-card-content>{{business._source.profile.overview}}</ion-card-content>
      
    </ion-card>
   </ion-list>

@@ -10,11 +10,13 @@ import { MyApp } from './app.component';
 
 import { RootPage } from '../pages/root/root';
 import { HomePage } from '../pages/home/home';
+import { AddbusinessPage } from '../pages/addbusiness/addbusiness';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BusinessProvider } from '../providers/business/business';
 import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
+import { ElasticsearchProvider } from '../providers/elasticsearch/elasticsearch';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-htt
     MyApp,
     HomePage,
     RootPage,
+    AddbusinessPage
+
     
   ],
   imports: [
@@ -35,6 +39,7 @@ import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-htt
     MyApp,
     HomePage,
     RootPage,
+    AddbusinessPage
     
    
   ],
@@ -45,7 +50,8 @@ import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-htt
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     BusinessProvider,
     ProcessHttpmsgProvider,
-    { provide: 'BaseURL' , useValue: baseURL}
+    { provide: 'BaseURL' , useValue: baseURL},
+    ElasticsearchProvider
   ]
 })
 export class AppModule {}
